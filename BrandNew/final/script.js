@@ -28,4 +28,18 @@ sliders.forEach(slide => {
     // .addIndicators({
     //   name: "slider"
     // });
-})  
+})
+
+let laptopImg = document.querySelector("body > main > section:nth-child(3) > div.slide-img-area > img");
+let keyboardImg = document.querySelector("body > main > section:nth-child(9) > div.slide-img-area > img")
+
+function addMouseEventListener(ImgArea, selectImg, Event) {
+    ImgArea.addEventListener(Event, function () {
+        ImgArea.src = selectImg;
+    })
+}
+
+addMouseEventListener(laptopImg, "./img/laptop-dark.jpg", "mouseover");
+addMouseEventListener(laptopImg, "./img/laptop-light.jpg", "mouseout");
+addMouseEventListener(keyboardImg, "./img/keyboard-dark.jpg", "mouseover");
+addMouseEventListener(keyboardImg, "./img/keyboard-light.jpg", "mouseout");
